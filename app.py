@@ -3,6 +3,12 @@ import os
 from dotenv import load_dotenv
 from langchain_core.messages import HumanMessage
 from graph import karaoke_graph
+from setup import install_system_dependencies, setup_vocal_remover
+
+print("Setting up system dependencies...")
+install_system_dependencies()
+setup_vocal_remover()
+print("System dependencies setup complete!!")
 
 # Load environment variables
 load_dotenv()
